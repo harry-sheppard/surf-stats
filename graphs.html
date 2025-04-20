@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+	
+<nav>
+  <ul>
+	<li><a href="index.html">About</a></li>
+	<li><strong>Graphs</strong></li>
+	<li><a href="survey.html">Survey</a></li>
+	<li><a href="reccomendations.html">Reccomendations</a></li>
+  </ul>
+</nav>
+
+    <head>
+	</head>
+	
+	<body>
+
+		<h1>.</h1>
+		<h1>Graphs</h1>
+		
+		<div class="text_img_container" style="width=1200px">
+		
+			<div class="file-upload-wrapper"style="display: block; margin: 0 auto;">
+				<input type="file" name="file" id="fileInput" accept=".csv">
+				<label for="fileInput" class="button" id="fileButton">+ Upload CSV File</label>
+			</div>
+			
+			<div class="dropdown" id="selectorContainer"  style="display: none;">
+				<select name="graphSelector" id="graphSelect" class="dropselection">
+					<option  class="dropoption" value="0">Whole Timeseries</option>
+					<option  class="dropoption" value="1">Mean per Year</option>
+					<option  class="dropoption" value="2">Height over Month</option>
+					<option  class="dropoption" value="3">Height over Location</option>
+					
+					
+				</select>
+			</div>
+			
+			<div style="padding:20px;  margin:20px">
+				<div id="chartContainer" style="width: 900px; height: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+					<canvas id="myChart" style="display: none;"></canvas>
+					<img id="colourbar" src="colourbar (1).png" alt="colourbar" style="display:none; margin-left: 20px; width: 85px; height: 350px;">
+				</div>
+				
+				<div class="variableContainer", id="dateRangeContainer", style="display: none; margin:20px auto 20px auto; width: 100px">
+					<p> Date Range: </p>
+						<label for="minDate">From:</label>
+						<input type="datetime-local" id="minDate" name="minDT" value="">
+						<label for="maxDate">To:</label>
+						<input type="datetime-local" id="maxDate" name="maxDT">
+				</div>
+
+				<div class="variableContainer", id="slidersContainer", style="display: none; margin:20px auto 20px auto; width: 100px">
+				
+					<div class="slidecontainer", id="sliderContainer">
+						<input type="range" id="minSlider" class="rangeSlider" value ="1985" step="1" min="1985" max="2025">
+						<p> From: <span id="minSliderOutput" ></span>  </p>
+					</div>
+					
+					<div class="slidecontainer" id="sliderContainer2">
+						<input type="range" id="maxSlider" class="rangeSlider" value ="2025" step="1" min="1985" max="2025">
+						<p> To: <span id="maxSliderOutput" ></span>  </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+    <script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+</html>

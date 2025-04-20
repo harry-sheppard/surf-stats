@@ -1,0 +1,187 @@
+body {
+	/*background-image: url('sea foam.png');
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	background-color: #ACE;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+    left: 0px;
+    height: 50px;
+    background-color: #2C64B4;
+    width: 100%;
+    text-align: center;
+	font-size: 100%;
+}
+
+ul {
+	display: inline-block;
+	color:#8AE;
+}
+
+li {
+  padding: 0;
+  float: left;
+  padding: 0px 20px;
+  text-align: center;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color:#FFF;
+}
+
+nav a:hover {font-size:150%;}
+
+.file-upload-wrapper {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+#fileInput {
+	opacity: 0%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+}
+
+.button {
+	background: #014;
+	color: white;
+	line-height: 1.2;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	width: auto;
+	font-size: 16px;
+	text-align: center;
+}
+
+.button:hover, .button:focus {
+  background-color: #236;
+}
+
+#myChart {
+	background-color: #FFF;
+}
+
+.slidecontainer{
+	width = 100%
+}
+
+.slider {
+  width: 50%; /* Full-width */
+  height: 20px; /* Specified height */
+}
+
+/* Dropdown Button */
+.dropselection {
+	background-color: #014;
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.dropoptions {
+	background-color: #236;
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropselection:hover, .dropselection:focus {
+	background-color: #236;
+}
+
+/* Container to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+/*.show {display:block;}*/
+
+form {
+	margin: 0px auto 20px auto;
+	width: 295px;
+	padding-left: 43%;
+	padding-right: 41%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #FFF6;
+}
+
+label {
+	display: block;
+	margin-bottom: 20px;
+}
+
+table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+table, th, td { border: 1px solid #ccc; padding: 8px; }
+th { background-color: #f0f0f0; }
+
+.toggle-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.toggle-text {
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#summary p {
+  margin-bottom: 10px;
+  margin-top: 0px
+}
+
+#summary canvas {
+  margin-top: 0;
+  padding: 0;
+  display: block;
+}
+
+.text_img_container {
+	padding: 30px;
+	background-color: #DEFE;
+	margin: 0 auto;
+	width: 1200px;
+}
+
+.recco_img {
+	float: right;
+	background-color: #FFFF;
+	padding: 10px;
+	margin: 20px;
+}
+
+.index_img {
+	padding: 10px;
+	background-color: #FFF6;
+	display: inline-block; 
+	margin: 10px;
+}
+
+h1 {
+	text-align: center;
+}

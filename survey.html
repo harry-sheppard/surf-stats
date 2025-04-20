@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<nav>
+	  <ul>
+		<li><a href="index.html">About</a></li>
+		<li><a href="graphs.html">Graphs</a></li>
+		<li><strong>Survey</strong></li>
+		<li><a href="reccomendations.html">Reccomendations</a></li>
+	  </ul>
+	</nav>
+	
+	<body>
+		<h1>.</h1>
+		<h1>Survey</h1>
+		<form id="userForm" style="display: block; margin: 0 auto;">
+		
+			<label>
+			  <strong>Month:</strong>
+				<select id="month" class="dropselection" required style="margin-left:30px">
+					<option class="dropoption" value="">Select</option>
+					<option class="dropoption" value="Jan">Jan</option>
+					<option class="dropoption" value="Feb">Feb</option>
+					<option class="dropoption" value="Mar">Mar</option>
+					<option class="dropoption" value="Apr">Apr</option>
+					<option class="dropoption" value="May">May</option>
+					<option class="dropoption" value="Jun">Jun</option>
+					<option class="dropoption" value="Jul">Jul</option>
+					<option class="dropoption" value="Aug">Aug</option>
+					<option class="dropoption" value="Sep">Sep</option>
+					<option class="dropoption" value="Oct">Oct</option>
+					<option class="dropoption" value="Nov">Nov</option>
+					<option class="dropoption" value="Dec">Dec</option>
+					
+				</select>
+			</label>
+			
+			
+			<label>
+			  <strong>Location:</strong>
+			  
+				<select id="location_name_dropdown" class="dropselection" required style="margin-left:15px">
+					<option class="dropoption" value="">Select</option>
+					<option class="dropoption" value="Bundoran, 54.4791° N, 8.2779° W">Bundoran</option>
+					<option class="dropoption" value="Lahinch, 52.9335° N, 9.3441° W">Lahinch</option>
+					<option class="dropoption" value="Strandhill, 54.2700° N, 8.5989° W">Strandhill</option>
+					<option class="dropoption" value="Tramore, 52.1614° N, 7.1493° W">Tramore</option>
+					<option class="dropoption" value="other">Other (Please Specify)</option>
+				</select>
+				<div id="specify_location" style="display:none; margin-top: 15px; padding: 0px 20px;">
+					<label>
+					  Place Name:
+						<input type="text" id="location_name_input">
+					</label>
+						
+					<label>
+					  Latitude:
+						<input type="number" step="any" id="lat_input">
+					</label>
+					
+					<label>
+					  Longitude:
+						<input type="number" step="any" id="long_input">
+					</label>
+				</div>
+			</label>
+			
+			
+			<label>
+			  <strong>Height Range:</strong>
+				<input type="range" id="height_slider" class="rangeSlider" value ="0" step="0.5" min="0" max="6">
+				<span id="heightValue">0 - 0.5</span>m
+			</label>
+			
+			<div class="toggle-container">
+				<label>
+					<strong>Were These Surfable Conditions?</strong>
+					  <input type="checkbox" id="surfable" style="display:inline">
+				</label>
+			</div>
+			
+			<button type="submit" class="button" style="display:block; margin-left:85px;">Submit</button>
+			
+		</form>
+
+		<h2>Summary</h2>
+		<div id="summary" style="background-color: #FFF6; padding:20px">
+			<!-- summarise and display chart -->
+		</div>
+		
+		<h2>All Submissions</h2>
+		<button class="button" onclick="clearData()" style="margin-bottom:20px">Clear Data</button>
+		<div id="allSubmissions"style="background-color: #FFF6; padding:20px">
+			<!-- table of all user submissions -->
+		</div>
+		
+
+			
+	</body>
+	
+	<script src="survey.js"></script>
+	<link rel="stylesheet" href="style.css">
+</html>
